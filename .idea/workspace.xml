@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="67b426ff-f6b8-4070-bd01-e966a167367e" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Tag Library Descriptor" />
+        <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="Class" />
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26hUqMuXwTgcFe48RWMQGvMomnC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="a5426e12-d89c-4024-a893-93997c514c2d" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/servicedb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/Photos" />
+      <recent name="$PROJECT_DIR$/src/main/resources/stationPhotos" />
+      <recent name="$PROJECT_DIR$/src/main/resources/manuals" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/Photos/Photos/PS1" />
+      <recent name="$PROJECT_DIR$/src/main/resources/stationPhotos/PS 1/PS1/Well" />
+      <recent name="$PROJECT_DIR$/src/main/resources/stationPhotos/PS 1/PS1" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/servicedb" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.servicedb.Entities" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.servicedb" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.servicedb.Main" />
+      <module name="ServiceDB" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67b426ff-f6b8-4070-bd01-e966a167367e" name="Changes" comment="" />
+      <created>1647875505238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647875505238</updated>
+      <workItem from="1647875506503" duration="2604000" />
+      <workItem from="1647992734343" duration="7898000" />
+      <workItem from="1648045574440" duration="13774000" />
+      <workItem from="1648412052544" duration="2309000" />
+      <workItem from="1648481860707" duration="2002000" />
+      <workItem from="1648507050928" duration="2555000" />
+      <workItem from="1648731889291" duration="6771000" />
+      <workItem from="1648766165911" duration="9301000" />
+      <workItem from="1649075992190" duration="4455000" />
+      <workItem from="1649375240821" duration="4905000" />
+      <workItem from="1649383380204" duration="80000" />
+      <workItem from="1649524481731" duration="32296000" />
+      <workItem from="1649887761981" duration="4050000" />
+      <workItem from="1649973481298" duration="4929000" />
+      <workItem from="1650051543668" duration="3863000" />
+      <workItem from="1650070137369" duration="2013000" />
+      <workItem from="1650073427569" duration="6986000" />
+      <workItem from="1650494691146" duration="6474000" />
+      <workItem from="1650977884212" duration="19960000" />
+      <workItem from="1651507308027" duration="90451000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="regexState">
+    <option name="map">
+      <map>
+        <entry key="flags" value="0" />
+        <entry key="mode" value="3" />
+        <entry key="regex" value="[.1-9]" />
+        <entry key="replacement" value="" />
+        <entry key="text" value="NP3102.06" />
+      </map>
+    </option>
+  </component>
+</project>
