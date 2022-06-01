@@ -1,0 +1,1373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicedb.Controllers.PSInspectionPLC">
+    <BorderPane prefHeight="883.0" prefWidth="1005.0">
+        <center>
+            <GridPane prefHeight="852.0" prefWidth="1083.0" BorderPane.alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.0" minWidth="10.0" prefWidth="284.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="734.0" minWidth="10.0" prefWidth="721.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints maxHeight="426.0" minHeight="10.0" prefHeight="426.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="426.0" minHeight="10.0" prefHeight="426.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <VBox prefHeight="432.0" prefWidth="253.0">
+                        <children>
+                            <Label text="Pump 1">
+                        <VBox.margin>
+                           <Insets top="10.0" />
+                        </VBox.margin></Label>
+                            <GridPane>
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <TextField fx:id="P1L1AmpTF" promptText="Leg 1 Amp" GridPane.columnIndex="1" />
+                                    <TextField fx:id="P1L2AmpTF" promptText="Leg 2 Amp" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="P1L3AmpTF" promptText="Leg 3 Amp" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="P1L1MegTF" promptText="MegaOhms" GridPane.columnIndex="2" />
+                                    <TextField fx:id="P1L2MegTF" promptText="MegaOhms" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="P1L3MegTF" promptText="MegaOhms" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField fx:id="P1L1HertzTF" promptText="Hertz" />
+                                </children>
+                            </GridPane>
+                            <Label text="Pump 2">
+                        <VBox.margin>
+                           <Insets top="45.0" />
+                        </VBox.margin></Label>
+                            <GridPane>
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <TextField fx:id="P2L1AmpTF" promptText="Leg 1 Amp" GridPane.columnIndex="1" />
+                                    <TextField fx:id="P2L2AmpTF" promptText="Leg 2 Amp" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="P2L3AmpTF" promptText="Leg 3 Amp" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="P2L1MegTF" promptText="MegaOhms" GridPane.columnIndex="2" />
+                                    <TextField fx:id="P2L2MegTF" promptText="MegaOhms" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="P2L3MegTF" promptText="MegaOhms" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField fx:id="P2L1HertzTF" promptText="Hertz" />
+                                </children>
+                            </GridPane>
+                            <Label fx:id="pump3Label" text="Pump 3">
+                        <VBox.margin>
+                           <Insets top="45.0" />
+                        </VBox.margin></Label>
+                            <GridPane>
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <TextField fx:id="P3L1AmpTF" promptText="Leg 1 Amp" GridPane.columnIndex="1" />
+                                    <TextField fx:id="P3L2AmpTF" promptText="Leg 2 Amp" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="P3L3AmpTF" promptText="Leg 3 Amp" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="P3L1MegTF" promptText="MegaOhms" GridPane.columnIndex="2" />
+                                    <TextField fx:id="P3L2MegTF" promptText="MegaOhms" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="P3L3MegTF" promptText="MegaOhms" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField fx:id="P3L1HertzTF" promptText="Hertz" />
+                                </children>
+                        <VBox.margin>
+                           <Insets />
+                        </VBox.margin>
+                            </GridPane>
+                        </children>
+                    </VBox>
+                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                        <children>
+                          <GridPane>
+                              <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              </columnConstraints>
+                              <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              </rowConstraints>
+                              <children>
+                                  <CheckBox fx:id="terminationsCB" mnemonicParsing="false" text="Termintaions" />
+                                  <CheckBox fx:id="picturesCB" mnemonicParsing="false" text="Pictures" GridPane.rowIndex="1" />
+                                  <CheckBox fx:id="drawingsCB" mnemonicParsing="false" text="Drawings" GridPane.rowIndex="2" />
+                                  <CheckBox fx:id="lightCB" mnemonicParsing="false" text="Light" GridPane.rowIndex="3" />
+                                  <CheckBox fx:id="gfciCB" mnemonicParsing="false" text="GFCI" GridPane.rowIndex="4" />
+                                  <CheckBox fx:id="floatCB" mnemonicParsing="false" text="Floats/Transducer" GridPane.rowIndex="6" />
+                                  <CheckBox fx:id="batCB" mnemonicParsing="false" text="Replace Battery" GridPane.rowIndex="7" />
+                                  <CheckBox fx:id="cleanCB" mnemonicParsing="false" text="Clean" GridPane.rowIndex="8" />
+                                  <CheckBox fx:id="sealOffCB" mnemonicParsing="false" text="Seal Offs" GridPane.rowIndex="5" />
+                           <Label text="Panel Condition" GridPane.columnIndex="1">
+                              <GridPane.margin>
+                                 <Insets left="25.0" />
+                              </GridPane.margin>
+                           </Label>
+                           <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <children>
+                                 <CheckBox fx:id="panelConditionCBgood" mnemonicParsing="false" text="Good" />
+                                 <CheckBox fx:id="panelConditionCBreplace" mnemonicParsing="false" text="Replace">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                              </children>
+                           </HBox>
+                              </children>
+                          </GridPane>
+                     <Label text="Notes" />
+                     <TextArea fx:id="notes" prefHeight="344.0" prefWidth="300.0" />
+                        </children>
+                    </VBox>
+                    <VBox prefHeight="335.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <children>
+                            <Label text="Module 2" />
+                     <GridPane prefHeight="417.0" prefWidth="300.0">
+                        <columnConstraints>
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="259.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="189.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="270.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                           <HBox>
+                              <children>
+                                 <Label text="In0:" />
+                                 <Text fx:id="m2in0T" strokeType="OUTSIDE" strokeWidth="0.0" text="P3 Running">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="1">
+                              <children>
+                                 <Label text="In1:" />
+                                 <Text fx:id="m2in1T" strokeType="OUTSIDE" strokeWidth="0.0" text="P3 Breaker Trip">
+                                    <HBox.margin>
+                                       <Insets left="11.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="2">
+                              <children>
+                                 <Label text="In2:" />
+                                 <Text fx:id="m2in2T" strokeType="OUTSIDE" strokeWidth="0.0" text="P3 in Auto">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="3">
+                              <children>
+                                 <Label text="In3:" />
+                                 <Text fx:id="m2in3T" strokeType="OUTSIDE" strokeWidth="0.0" text="P3 Seal Fail">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                              <children>
+                                 <CheckBox fx:id="m2in0ok" mnemonicParsing="false" text="Ok">
+                                    <padding>
+                                       <Insets top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in0bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in0TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox layoutX="160.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <children>
+                                 <CheckBox fx:id="m2in1ok" mnemonicParsing="false" text="Ok">
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in1bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in1TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox layoutX="160.0" layoutY="40.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <children>
+                                 <CheckBox fx:id="m2in2ok" mnemonicParsing="false" text="Ok">
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in2bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in2TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox layoutX="160.0" layoutY="70.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <children>
+                                 <CheckBox fx:id="m2in3ok" mnemonicParsing="false" text="Ok">
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in3bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in3TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="4">
+                              <children>
+                                 <Label text="In4:" />
+                                 <Text fx:id="m2in4T" strokeType="OUTSIDE" strokeWidth="0.0" text="P3 Overtemp">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <children>
+                                 <CheckBox fx:id="m2in4ok" mnemonicParsing="false" text="Ok">
+                                    <padding>
+                                       <Insets top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in4bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in4TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="5">
+                              <children>
+                                 <Label text="In5:" />
+                                 <Text fx:id="m2in5T" strokeType="OUTSIDE" strokeWidth="0.0" text="P3 Overload">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                              <children>
+                                 <CheckBox fx:id="m2in5ok" mnemonicParsing="false" text="Ok">
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in5bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in5TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="6">
+                              <children>
+                                 <Label text="In6:" />
+                                 <Text fx:id="m2in6T" strokeType="OUTSIDE" strokeWidth="0.0" text="PLC on UPS">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                              <children>
+                                 <CheckBox fx:id="m2in6ok" mnemonicParsing="false" text="Ok">
+                                    <padding>
+                                       <Insets top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in6bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in6TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="7">
+                              <children>
+                                 <Label text="In7:" />
+                                 <Text fx:id="m2in7T" strokeType="OUTSIDE" strokeWidth="0.0" text="Replace Battery">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="28.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                              <children>
+                                 <CheckBox fx:id="m2in7ok" mnemonicParsing="false" text="Ok">
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in7bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in7TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="8">
+                              <children>
+                                 <Label text="In8:" />
+                                 <Text fx:id="m2in8T" strokeType="OUTSIDE" strokeWidth="0.0" text="High High Float">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                              <children>
+                                 <CheckBox fx:id="m2in8ok" mnemonicParsing="false" text="Ok">
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in8bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in8TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="9">
+                              <children>
+                                 <Label text="In9:" />
+                                 <Text fx:id="m2in9T" strokeType="OUTSIDE" strokeWidth="0.0" text="High Float">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                              <children>
+                                 <CheckBox fx:id="m2in9ok" mnemonicParsing="false" text="Ok">
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in9bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" />
+                                    </padding>
+                                    <HBox.margin>
+                                       <Insets top="5.0" />
+                                    </HBox.margin>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in9TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="10">
+                              <children>
+                                 <Label text="In10:" />
+                                 <Text fx:id="m2in10T" strokeType="OUTSIDE" strokeWidth="0.0" text="Low Float">
+                                    <HBox.margin>
+                                       <Insets left="4.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                              <children>
+                                 <CheckBox fx:id="m2in10ok" mnemonicParsing="false" text="Ok">
+                                    <padding>
+                                       <Insets top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in10bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in10TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="11">
+                              <children>
+                                 <Label text="In11:" />
+                                 <Text fx:id="m2in11T" strokeType="OUTSIDE" strokeWidth="0.0" text="Spare">
+                                    <HBox.margin>
+                                       <Insets left="5.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                              <children>
+                                 <CheckBox fx:id="m2in11ok" mnemonicParsing="false" text="Ok">
+                                    <padding>
+                                       <Insets top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in11bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in11TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="12">
+                              <children>
+                                 <Label text="In12:" />
+                                 <Text fx:id="m2in12T" strokeType="OUTSIDE" strokeWidth="0.0" text="Spare">
+                                    <HBox.margin>
+                                       <Insets left="4.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                              <children>
+                                 <CheckBox fx:id="m2in12ok" mnemonicParsing="false" text="Ok">
+                                    <padding>
+                                       <Insets top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in12bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in12TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="13">
+                              <children>
+                                 <Label text="In13:" />
+                                 <Text fx:id="m2in13T" strokeType="OUTSIDE" strokeWidth="0.0" text="Instrusion">
+                                    <HBox.margin>
+                                       <Insets left="4.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                              <children>
+                                 <CheckBox fx:id="m2in13ok" mnemonicParsing="false" text="Ok">
+                                    <padding>
+                                       <Insets top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in13bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in13TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="14">
+                              <children>
+                                 <Label text="In14:" />
+                                 <Text fx:id="m2in14T" strokeType="OUTSIDE" strokeWidth="0.0" text="Bio-Filter">
+                                    <HBox.margin>
+                                       <Insets left="4.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
+                              <children>
+                                 <CheckBox fx:id="m2in14ok" mnemonicParsing="false" text="Ok">
+                                    <padding>
+                                       <Insets top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in14bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in14TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <Text fx:id="m2in0instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Pump breaker is open.  Operate in hand." GridPane.columnIndex="2">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m2in1instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Pump breaker is open." GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m2in2instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Pump breaker is open. Operate in auto." GridPane.columnIndex="2" GridPane.rowIndex="2">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m2in3instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Jump terminal 2 and 10 on SF209" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m2in4instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Pull CR217" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m2in5instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Soft Starter (manually trip overload)" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m2in6instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Jump terminals 3 and 4 on UPS" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m2in7instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Jump terminals 5 and 6 on UPS" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m2in8instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="activate high high float" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m2in9instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="activate high float" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m2in10instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="activate low float" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="11">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="12">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m2in13instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Open panel doors" GridPane.columnIndex="2" GridPane.rowIndex="13">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="14">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="15">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="15">
+                              <children>
+                                 <CheckBox fx:id="m2in15ok" mnemonicParsing="false" text="Ok">
+                                    <padding>
+                                       <Insets top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m2in15bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <TextField fx:id="m2in15TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="15">
+                              <children>
+                                 <Label text="In15:" />
+                                 <Text fx:id="m2in15T" strokeType="OUTSIDE" strokeWidth="0.0" text="Generator Running">
+                                    <HBox.margin>
+                                       <Insets left="4.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <Text fx:id="m2in11instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                           <Text fx:id="m2in12instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                           <Text fx:id="m2in14instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                           <Text fx:id="m2in15instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+                        </children>
+                     </GridPane>
+                        </children>
+                    </VBox>
+               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                  <children>
+                              <Label text="Module 1" />
+                              <GridPane prefHeight="409.0" prefWidth="675.0">
+                                  <columnConstraints>
+                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="262.0" />
+                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="186.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="0.0" prefWidth="269.0" />
+                                  </columnConstraints>
+                                  <rowConstraints>
+                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  </rowConstraints>
+                                  <children>
+                           <HBox>
+                              <children>
+                                 <Label text="In0:" />
+                                 <Text fx:id="m1in0T" strokeType="OUTSIDE" strokeWidth="0.0" text="P1 Running">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="1">
+                              <children>
+                                 <Label text="In1:" />
+                                 <Text fx:id="m1in1T" strokeType="OUTSIDE" strokeWidth="0.0" text="P1 Breaker Trip">
+                                    <HBox.margin>
+                                       <Insets left="11.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="2">
+                              <children>
+                                 <Label text="In2:" />
+                                 <Text fx:id="m1in2T" strokeType="OUTSIDE" strokeWidth="0.0" text="P1 in Auto">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="3">
+                              <children>
+                                 <Label text="In3:" />
+                                 <Text fx:id="m1in3T" strokeType="OUTSIDE" strokeWidth="0.0" text="P1 Seal Fail">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                          <children>
+                                              <CheckBox fx:id="m1in0ok" mnemonicParsing="false" text="Ok">
+                                                  <padding>
+                                                      <Insets top="5.0" />
+                                                  </padding>
+                                              </CheckBox>
+                                              <CheckBox fx:id="m1in0bad" mnemonicParsing="false" text="Wrong">
+                                                  <padding>
+                                                      <Insets left="5.0" top="5.0" />
+                                                  </padding>
+                                              </CheckBox>
+                                              <TextField fx:id="m1in0TF" maxWidth="70.0" promptText="True DI">
+                                                  <HBox.margin>
+                                                      <Insets left="10.0" top="2.5" />
+                                                  </HBox.margin>
+                                              </TextField>
+                                          </children>
+                                      </HBox>
+                                      <HBox layoutX="160.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                          <children>
+                                              <CheckBox fx:id="m1in1ok" mnemonicParsing="false" text="Ok">
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <CheckBox fx:id="m1in1bad" mnemonicParsing="false" text="Wrong">
+                                                  <padding>
+                                                      <Insets left="5.0" />
+                                                  </padding>
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <TextField fx:id="m1in1TF" maxWidth="70.0" promptText="True DI">
+                                                  <HBox.margin>
+                                                      <Insets left="10.0" top="2.5" />
+                                                  </HBox.margin>
+                                              </TextField>
+                                          </children>
+                                      </HBox>
+                                      <HBox layoutX="160.0" layoutY="40.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                          <children>
+                                              <CheckBox fx:id="m1in2ok" mnemonicParsing="false" text="Ok">
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <CheckBox fx:id="m1in2bad" mnemonicParsing="false" text="Wrong">
+                                                  <padding>
+                                                      <Insets left="5.0" />
+                                                  </padding>
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <TextField fx:id="m1in2TF" maxWidth="70.0" promptText="True DI">
+                                                  <HBox.margin>
+                                                      <Insets left="10.0" top="2.5" />
+                                                  </HBox.margin>
+                                              </TextField>
+                                          </children>
+                                      </HBox>
+                                      <HBox layoutX="160.0" layoutY="70.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                          <children>
+                                              <CheckBox fx:id="m1in3ok" mnemonicParsing="false" text="Ok">
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <CheckBox fx:id="m1in3bad" mnemonicParsing="false" text="Wrong">
+                                                  <padding>
+                                                      <Insets left="5.0" />
+                                                  </padding>
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <TextField fx:id="m1in3TF" maxWidth="70.0" promptText="True DI">
+                                                  <HBox.margin>
+                                                      <Insets left="10.0" top="2.5" />
+                                                  </HBox.margin>
+                                              </TextField>
+                                          </children>
+                                      </HBox>
+                           <HBox GridPane.rowIndex="4">
+                              <children>
+                                 <Label text="In4:" />
+                                 <Text fx:id="m1in4T" strokeType="OUTSIDE" strokeWidth="0.0" text="P1 Overtemp">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                        <children>
+                                            <CheckBox fx:id="m1in4ok" mnemonicParsing="false" text="Ok">
+                                                <padding>
+                                                    <Insets top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <CheckBox fx:id="m1in4bad" mnemonicParsing="false" text="Wrong">
+                                                <padding>
+                                                    <Insets left="5.0" top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <TextField fx:id="m1in4TF" maxWidth="70.0" promptText="True DI">
+                                                <HBox.margin>
+                                                    <Insets left="10.0" top="2.5" />
+                                                </HBox.margin>
+                                            </TextField>
+                                        </children>
+                                    </HBox>
+                           <HBox GridPane.rowIndex="5">
+                              <children>
+                                 <Label text="In5:" />
+                                 <Text fx:id="m1in5T" strokeType="OUTSIDE" strokeWidth="0.0" text="P1 Overload">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                        <children>
+                                            <CheckBox fx:id="m1in5ok" mnemonicParsing="false" text="Ok">
+                                                <HBox.margin>
+                                                    <Insets top="5.0" />
+                                                </HBox.margin>
+                                            </CheckBox>
+                                            <CheckBox fx:id="m1in5bad" mnemonicParsing="false" text="Wrong">
+                                                <padding>
+                                                    <Insets left="5.0" />
+                                                </padding>
+                                                <HBox.margin>
+                                                    <Insets top="5.0" />
+                                                </HBox.margin>
+                                            </CheckBox>
+                                            <TextField fx:id="m1in5TF" maxWidth="70.0" promptText="True DI">
+                                                <HBox.margin>
+                                                    <Insets left="10.0" top="2.5" />
+                                                </HBox.margin>
+                                            </TextField>
+                                        </children>
+                                    </HBox>
+                           <HBox GridPane.rowIndex="6">
+                              <children>
+                                 <Label text="In6:" />
+                                 <Text fx:id="m1in6T" strokeType="OUTSIDE" strokeWidth="0.0" text="P2 Running">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                          <children>
+                                              <CheckBox fx:id="m1in6ok" mnemonicParsing="false" text="Ok">
+                                                  <padding>
+                                                      <Insets top="5.0" />
+                                                  </padding>
+                                              </CheckBox>
+                                              <CheckBox fx:id="m1in6bad" mnemonicParsing="false" text="Wrong">
+                                                  <padding>
+                                                      <Insets left="5.0" top="5.0" />
+                                                  </padding>
+                                              </CheckBox>
+                                              <TextField fx:id="m1in6TF" maxWidth="70.0" promptText="True DI">
+                                                  <HBox.margin>
+                                                      <Insets left="10.0" top="2.5" />
+                                                  </HBox.margin>
+                                              </TextField>
+                                          </children>
+                                      </HBox>
+                           <HBox GridPane.rowIndex="7">
+                              <children>
+                                 <Label text="In7:" />
+                                 <Text fx:id="m1in7T" strokeType="OUTSIDE" strokeWidth="0.0" text="P2 Breaker Trip">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                          <children>
+                                              <CheckBox fx:id="m1in7ok" mnemonicParsing="false" text="Ok">
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <CheckBox fx:id="m1in7bad" mnemonicParsing="false" text="Wrong">
+                                                  <padding>
+                                                      <Insets left="5.0" />
+                                                  </padding>
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <TextField fx:id="m1in7TF" maxWidth="70.0" promptText="True DI">
+                                                  <HBox.margin>
+                                                      <Insets left="10.0" top="2.5" />
+                                                  </HBox.margin>
+                                              </TextField>
+                                          </children>
+                                      </HBox>
+                           <HBox GridPane.rowIndex="8">
+                              <children>
+                                 <Label text="In8:" />
+                                 <Text fx:id="m1in8T" strokeType="OUTSIDE" strokeWidth="0.0" text="P2 in Auto">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                          <children>
+                                              <CheckBox fx:id="m1in8ok" mnemonicParsing="false" text="Ok">
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <CheckBox fx:id="m1in8bad" mnemonicParsing="false" text="Wrong">
+                                                  <padding>
+                                                      <Insets left="5.0" />
+                                                  </padding>
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <TextField fx:id="m1in8TF" maxWidth="70.0" promptText="True DI">
+                                                  <HBox.margin>
+                                                      <Insets left="10.0" top="2.5" />
+                                                  </HBox.margin>
+                                              </TextField>
+                                          </children>
+                                      </HBox>
+                           <HBox GridPane.rowIndex="9">
+                              <children>
+                                 <Label text="In9:" />
+                                 <Text fx:id="m1in9T" strokeType="OUTSIDE" strokeWidth="0.0" text="P2 Seal Fail">
+                                    <HBox.margin>
+                                       <Insets left="10.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                          <children>
+                                              <CheckBox fx:id="m1in9ok" mnemonicParsing="false" text="Ok">
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <CheckBox fx:id="m1in9bad" mnemonicParsing="false" text="Wrong">
+                                                  <padding>
+                                                      <Insets left="5.0" />
+                                                  </padding>
+                                                  <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                  </HBox.margin>
+                                              </CheckBox>
+                                              <TextField fx:id="m1in9TF" maxWidth="70.0" promptText="True DI">
+                                                  <HBox.margin>
+                                                      <Insets left="10.0" top="2.5" />
+                                                  </HBox.margin>
+                                              </TextField>
+                                          </children>
+                                      </HBox>
+                           <HBox GridPane.rowIndex="10">
+                              <children>
+                                 <Label text="In10:" />
+                                 <Text fx:id="m1in10T" strokeType="OUTSIDE" strokeWidth="0.0" text="P2 Overtemp">
+                                    <HBox.margin>
+                                       <Insets left="4.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                        <children>
+                                            <CheckBox fx:id="m1in10ok" mnemonicParsing="false" text="Ok">
+                                                <padding>
+                                                    <Insets top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <CheckBox fx:id="m1in10bad" mnemonicParsing="false" text="Wrong">
+                                                <padding>
+                                                    <Insets left="5.0" top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <TextField fx:id="m1in10TF" maxWidth="70.0" promptText="True DI">
+                                                <HBox.margin>
+                                                    <Insets left="10.0" top="2.5" />
+                                                </HBox.margin>
+                                            </TextField>
+                                        </children>
+                                    </HBox>
+                           <HBox GridPane.rowIndex="11">
+                              <children>
+                                 <Label text="In11:" />
+                                 <Text fx:id="m1in11T" strokeType="OUTSIDE" strokeWidth="0.0" text="P2 Overload">
+                                    <HBox.margin>
+                                       <Insets left="5.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                        <children>
+                                            <CheckBox fx:id="m1in11ok" mnemonicParsing="false" text="Ok">
+                                                <padding>
+                                                    <Insets top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <CheckBox fx:id="m1in11bad" mnemonicParsing="false" text="Wrong">
+                                                <padding>
+                                                    <Insets left="5.0" top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <TextField fx:id="m1in11TF" maxWidth="70.0" promptText="True DI">
+                                                <HBox.margin>
+                                                    <Insets left="10.0" top="2.5" />
+                                                </HBox.margin>
+                                            </TextField>
+                                        </children>
+                                    </HBox>
+                           <HBox GridPane.rowIndex="12">
+                              <children>
+                                 <Label text="In12:" />
+                                 <Text fx:id="m1in12T" strokeType="OUTSIDE" strokeWidth="0.0" text="UPS OK">
+                                    <HBox.margin>
+                                       <Insets left="5.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                                        <children>
+                                            <CheckBox fx:id="m1in12ok" mnemonicParsing="false" text="Ok">
+                                                <padding>
+                                                    <Insets top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <CheckBox fx:id="m1in12bad" mnemonicParsing="false" text="Wrong">
+                                                <padding>
+                                                    <Insets left="5.0" top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <TextField fx:id="m1in12TF" maxWidth="70.0" promptText="True DI">
+                                                <HBox.margin>
+                                                    <Insets left="10.0" top="2.5" />
+                                                </HBox.margin>
+                                            </TextField>
+                                        </children>
+                                    </HBox>
+                           <HBox GridPane.rowIndex="13">
+                              <children>
+                                 <Label text="In13:" />
+                                 <Text fx:id="m1in13T" strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Breaker Closed">
+                                    <HBox.margin>
+                                       <Insets left="5.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                                        <children>
+                                            <CheckBox fx:id="m1in13ok" mnemonicParsing="false" text="Ok">
+                                                <padding>
+                                                    <Insets top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <CheckBox fx:id="m1in13bad" mnemonicParsing="false" text="Wrong">
+                                                <padding>
+                                                    <Insets left="5.0" top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <TextField fx:id="m1in13TF" maxWidth="70.0" promptText="True DI">
+                                                <HBox.margin>
+                                                    <Insets left="10.0" top="2.5" />
+                                                </HBox.margin>
+                                            </TextField>
+                                        </children>
+                                    </HBox>
+                           <HBox GridPane.rowIndex="14">
+                              <children>
+                                 <Label text="In14:" />
+                                 <Text fx:id="m1in14T" strokeType="OUTSIDE" strokeWidth="0.0" text="Utility Power OK">
+                                    <HBox.margin>
+                                       <Insets left="5.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14">
+                                        <children>
+                                            <CheckBox fx:id="m1in14ok" mnemonicParsing="false" text="Ok">
+                                                <padding>
+                                                    <Insets top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <CheckBox fx:id="m1in14bad" mnemonicParsing="false" text="Wrong">
+                                                <padding>
+                                                    <Insets left="5.0" top="5.0" />
+                                                </padding>
+                                            </CheckBox>
+                                            <TextField fx:id="m1in14TF" maxWidth="70.0" promptText="True DI">
+                                                <HBox.margin>
+                                                    <Insets left="10.0" top="2.5" />
+                                                </HBox.margin>
+                                            </TextField>
+                                        </children>
+                                    </HBox>
+                           <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="15">
+                              <children>
+                                 <CheckBox fx:id="m1in15ok" mnemonicParsing="false" text="Ok">
+                                    <padding>
+                                       <Insets top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <CheckBox fx:id="m1in15bad" mnemonicParsing="false" text="Wrong">
+                                    <padding>
+                                       <Insets left="5.0" top="5.0" />
+                                    </padding>
+                                 </CheckBox>
+                                 <TextField fx:id="m1in15TF" maxWidth="70.0" promptText="True DI">
+                                    <HBox.margin>
+                                       <Insets left="10.0" top="2.5" />
+                                    </HBox.margin>
+                                 </TextField>
+                              </children>
+                           </HBox>
+                           <HBox GridPane.rowIndex="15">
+                              <children>
+                                 <Label text="In15:" />
+                                 <Text fx:id="m1in15T" strokeType="OUTSIDE" strokeWidth="0.0" text="Control Power OK">
+                                    <HBox.margin>
+                                       <Insets left="5.0" />
+                                    </HBox.margin>
+                                 </Text>
+                              </children>
+                           </HBox>
+                           <Text fx:id="m1in0InstructionT" strokeType="OUTSIDE" strokeWidth="0.0" text="Run pump in hand" GridPane.columnIndex="2">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in1instructionT" strokeType="OUTSIDE" strokeWidth="0.0" text="Manualy trip breaker" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in2instructionT" strokeType="OUTSIDE" strokeWidth="0.0" text="Operate HOA in auto." GridPane.columnIndex="2" GridPane.rowIndex="2">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in3instructionT" strokeType="OUTSIDE" strokeWidth="0.0" text="Jump terminal ?? And ?? on SF205 " GridPane.columnIndex="2" GridPane.rowIndex="3">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in4instructionT" strokeType="OUTSIDE" strokeWidth="0.0" text="Pull CR211. Jump " GridPane.columnIndex="2" GridPane.rowIndex="4">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in5instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text=" Soft Starter (manually trip overload)" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in6instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Pump breaker is open.  PUSH Starter in manually." GridPane.columnIndex="2" GridPane.rowIndex="6">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in7instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Pump breaker is open." GridPane.columnIndex="2" GridPane.rowIndex="7">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in8instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Pump breaker is open. Operate in auto." GridPane.columnIndex="2" GridPane.rowIndex="8">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in9instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Jump terminal 2 and 10 on SF207" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in10instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Pull CR214" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in11instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;VFD&gt; Jump terminal 7 and 4 CR307" GridPane.columnIndex="2" GridPane.rowIndex="11">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in12instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Open Terminal A and B on CR337 &lt;DO NOT PULL RELAY&gt;" GridPane.columnIndex="2" GridPane.rowIndex="12">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in13instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Open Main Breaker. Close Emergency Breaker." GridPane.columnIndex="2" GridPane.rowIndex="13">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in14instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Pull phase monitor." GridPane.columnIndex="2" GridPane.rowIndex="14">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                           <Text fx:id="m1in15instructionsT" strokeType="OUTSIDE" strokeWidth="0.0" text="Open control power breaker." GridPane.columnIndex="2" GridPane.rowIndex="15">
+                              <GridPane.margin>
+                                 <Insets left="5.0" />
+                              </GridPane.margin>
+                           </Text>
+                                  </children>
+                              </GridPane>
+                  </children>
+               </VBox>
+                </children>
+            </GridPane>
+        </center>
+        <bottom>
+            <HBox prefHeight="31.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                <children>
+                    <Button fx:id="saveBtn" mnemonicParsing="false" onMouseClicked="#save" text="Save">
+                  <HBox.margin>
+                     <Insets left="10.0" top="3.0" />
+                  </HBox.margin></Button>
+                </children>
+            </HBox>
+        </bottom></BorderPane>
+</Scene>
