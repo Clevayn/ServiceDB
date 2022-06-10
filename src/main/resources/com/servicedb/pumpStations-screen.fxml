@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -14,115 +15,231 @@
 <?import javafx.scene.text.Text?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicedb.Controllers.PumpStations">
-   <children>
-      <ListView fx:id="psList" onMouseClicked="#stationPresenter" prefHeight="748.0" prefWidth="300.0" />
-      <VBox prefHeight="748.0" prefWidth="676.0">
-         <children>
-            <AnchorPane prefHeight="269.0" prefWidth="672.0">
-               <children>
-                  <GridPane layoutY="14.0" prefHeight="52.0" prefWidth="713.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="51.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="127.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Label text="#" />
-                        <Label text="Name" GridPane.columnIndex="1" />
-                        <Label text="Generator Size" GridPane.columnIndex="2" />
-                        <Label text="Voltage" GridPane.columnIndex="3" />
-                        <Label text="Phase" GridPane.columnIndex="4" />
-                        <Label fx:id="elecComLabel" text="Meter #" GridPane.columnIndex="5" />
-                        <Label text="High Leg" GridPane.columnIndex="6" />
-                        <Text fx:id="psNumText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
-                        <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Text fx:id="genText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Text fx:id="voltText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Text fx:id="phaseText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                        <Text fx:id="mNumText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                        <Text fx:id="hlText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                     </children>
-                  </GridPane>
-                  <GridPane layoutY="69.0" prefHeight="200.0" prefWidth="713.0" AnchorPane.topAnchor="69.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="218.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="67.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="106.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Label text="Address" />
-                        <Label text="Start Up Condition" GridPane.rowIndex="1" />
-                        <Label text="Design Condition" GridPane.rowIndex="2" />
-                        <Label text="GPD" GridPane.rowIndex="3" />
-                        <Label text="Discharge Size" GridPane.rowIndex="4" />
-                        <Label text="Station Before" GridPane.rowIndex="5" />
-                        <Label text="Station After" GridPane.rowIndex="6" />
-                        <Text fx:id="addressText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
-                        <Text fx:id="startUpText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Text fx:id="designText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Text fx:id="gpdText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Text fx:id="dischargeText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <Text fx:id="stationbText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Text fx:id="stationaText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <Button fx:id="levelPriBtn" mnemonicParsing="false" text="Level Primary" GridPane.columnIndex="3" />
-                        <Button fx:id="levelSecBtn" mnemonicParsing="false" text="Level Secondary" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Button fx:id="p3ContBtn" mnemonicParsing="false" text="Pump Controller 1" GridPane.columnIndex="4" />
-                        <Button fx:id="p2ContBtn" mnemonicParsing="false" text="Pump Controller 2" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                        <Button fx:id="p1ContBtn" mnemonicParsing="false" text="Pump Controller 3" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                        <Button fx:id="pumpOneButton" mnemonicParsing="false" onAction="#pumpOneScreen" text="Pump 1" GridPane.columnIndex="5" />
-                        <Button fx:id="pumpTwoButton" mnemonicParsing="false" onAction="#pumpTwoScreen" text="Pump 2" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                        <Button fx:id="pumpThreeButton" mnemonicParsing="false" onAction="#pumpThreeScreen" text="Pump 3" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                        <Button fx:id="elecBtn" mnemonicParsing="false" onAction="#electricalScreen" text="Electrical" GridPane.columnIndex="2" />
-                        <Button fx:id="acBtn" mnemonicParsing="false" onAction="#acScreen" text="AC" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Button fx:id="spillBtn" mnemonicParsing="false" text="Spill" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Button fx:id="rainGaugeBtn" mnemonicParsing="false" text="Rain Gauge" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                        <Button fx:id="chlorineBtn" mnemonicParsing="false" text="Chlorine" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                        <Button fx:id="groundWaterBtn" mnemonicParsing="false" text="Ground Water" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <Button fx:id="pBatteryBtn" mnemonicParsing="false" text="Panel Battery" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                        <Button fx:id="rtuBatteryBtn" mnemonicParsing="false" text="RTU Battery" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-                        <Text fx:id="oitText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                        <Label text="OIT" GridPane.rowIndex="8" />
-                        <Label text="Zone" GridPane.rowIndex="7" />
-                        <Text fx:id="zoneText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                     </children>
-                  </GridPane>
-               </children>
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </VBox.margin>
-            </AnchorPane>
-            <HBox prefHeight="176.0" prefWidth="410.0">
-               <children>
-                  <ImageView fx:id="mapImage" fitHeight="153.0" fitWidth="211.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="staitonImage" fitHeight="150.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true" />
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </children>
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
+   <ListView fx:id="psList" onKeyPressed="#stationPresenter" onMouseClicked="#stationPresenter" prefHeight="748.0" prefWidth="300.0" />
+   <VBox prefHeight="748.0" prefWidth="676.0">
+      <AnchorPane prefHeight="269.0" prefWidth="672.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <GridPane layoutY="14.0" prefHeight="52.0" prefWidth="713.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="51.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="127.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label text="#" />
+            <Label text="Name" GridPane.columnIndex="1" />
+            <Label text="Generator Size" GridPane.columnIndex="2" />
+            <Label text="Voltage" GridPane.columnIndex="3" />
+            <Label text="Phase" GridPane.columnIndex="4" />
+            <Label fx:id="elecComLabel" text="Meter #" GridPane.columnIndex="5" />
+            <Label text="High Leg" GridPane.columnIndex="6" />
+            <Text fx:id="psNumText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+            <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text fx:id="genText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Text fx:id="voltText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Text fx:id="phaseText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Text fx:id="mNumText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Text fx:id="hlText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <TextField fx:id="meterNumTF" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextField fx:id="genSizeTF" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="voltageTF" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="phaseTF" visible="false" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField fx:id="highLegTF" visible="false" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <TextField fx:id="nameTF" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </GridPane>
+         <GridPane layoutY="69.0" prefHeight="350.0" prefWidth="713.0" AnchorPane.topAnchor="69.0">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="218.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="67.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="106.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="131.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="77.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label text="Address" />
+            <Label text="Start Up Condition" GridPane.rowIndex="1" />
+            <Label text="Design Condition" GridPane.rowIndex="2" />
+            <Label text="GPD" GridPane.rowIndex="3" />
+            <Label text="Discharge Size" GridPane.rowIndex="4" />
+            <Label text="Station Before" GridPane.rowIndex="5" />
+            <Label text="Station After" GridPane.rowIndex="6" />
+            <Text fx:id="addressText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" />
+            <Text fx:id="startUpText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text fx:id="designText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text fx:id="gpdText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text fx:id="dischargeText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Text fx:id="stationbText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Text fx:id="stationaText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button fx:id="levelPriBtn" mnemonicParsing="false" text="Level Primary" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="levelSecBtn" mnemonicParsing="false" text="Level Secondary" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="1.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="p3ContBtn" mnemonicParsing="false" text="Pump Controller 1" GridPane.columnIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="p2ContBtn" mnemonicParsing="false" text="Pump Controller 2" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="p1ContBtn" mnemonicParsing="false" text="Pump Controller 3" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="pumpOneButton" mnemonicParsing="false" onAction="#pumpOneScreen" text="Pump 1" GridPane.columnIndex="5">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="pumpTwoButton" mnemonicParsing="false" onAction="#pumpTwoScreen" text="Pump 2" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="pumpThreeButton" mnemonicParsing="false" onAction="#pumpThreeScreen" text="Pump 3" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="elecBtn" mnemonicParsing="false" onAction="#electricalScreen" text="Electrical" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="acBtn" mnemonicParsing="false" onAction="#acScreen" text="AC" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="17.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="spillBtn" mnemonicParsing="false" onMouseClicked="#openSpillScreen" text="Spill" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="rainGaugeBtn" mnemonicParsing="false" text="Rain Gauge" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="chlorineBtn" mnemonicParsing="false" text="Chlorine" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="22.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="groundWaterBtn" mnemonicParsing="false" text="Ground Water" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+            </Button>
+            <Text fx:id="oitText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label text="OIT" GridPane.rowIndex="8" />
+            <Label text="Zone" GridPane.rowIndex="7" />
+            <Text fx:id="zoneText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="dischargeTF" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="stationBTF" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="stationATF" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="zoneTF" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="oitTF" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="startUpTF" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="designCondTF" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="gpdTF" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="dischargePresBtn" mnemonicParsing="false" text="Discharge Pres" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="6.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="Panel Battery" GridPane.rowIndex="9" />
+            <Label text="RTU Battery" GridPane.rowIndex="10" />
+            <Text fx:id="panelBatT" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Text fx:id="rtuBatT" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <TextField fx:id="panelBatTF" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="rtuBatTF" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Button fx:id="distributionPresBtn" mnemonicParsing="false" text="Distribution Pres" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="flowBtn" mnemonicParsing="false" text="Flow" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="wellBtn" mnemonicParsing="false" text="Well" GridPane.columnIndex="3" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="35.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="addressTF" visible="false" GridPane.columnIndex="1" />
+            <Button fx:id="picsBtn" mnemonicParsing="false" onMouseClicked="#openPictureScreen" text="Pictures" GridPane.columnIndex="3" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="stationPowerBtn" mnemonicParsing="false" onMouseClicked="#openStationPower" text="Station Power" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+         </GridPane>
+      </AnchorPane>
+      <HBox prefHeight="279.0" prefWidth="733.0">
+         <ImageView fx:id="mapImage" fitHeight="296.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true" />
+      </HBox>
+      <HBox prefHeight="50.0" prefWidth="733.0">
+         <Button fx:id="editBtn" mnemonicParsing="false" onMouseClicked="#edit" text="Edit">
+            <HBox.margin>
+               <Insets left="10.0" top="13.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="updateBtn" mnemonicParsing="false" onMouseClicked="#update" text="Update" visible="false">
+            <HBox.margin>
+               <Insets left="10.0" top="13.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="cancelBtn" mnemonicParsing="false" onMouseClicked="#cancel" text="Cancel" visible="false">
+            <HBox.margin>
+               <Insets left="10.0" top="13.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="inspectionBtn" mnemonicParsing="false" onMouseClicked="#inspectionScreen" text="PS Inspection">
+            <HBox.margin>
+               <Insets left="10.0" top="13.0" />
+            </HBox.margin>
+         </Button>
+      </HBox>
+   </VBox>
 </HBox>

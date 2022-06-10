@@ -1,5 +1,6 @@
 package com.servicedb;
 
+import com.servicedb.DAO.EntityList;
 import com.servicedb.Entities.PumpStationsE;
 import com.servicedb.Entities.PumpsE;
 
@@ -22,7 +23,7 @@ public class RandomMethods {
         FileWriter fw = new FileWriter(file);
 
         List<String> list = new LinkedList<>();
-        for (PumpsE p: hu.pumpsListQuery()
+        for (PumpsE p: new EntityList<PumpsE>(new PumpsE()).getObservableList()
              ) {
             String s = p.getModel().strip().replaceAll("\\.\\d+", "");
             if (!list.contains(p.getBrand().strip() + " : " + s)) {
@@ -37,6 +38,11 @@ public class RandomMethods {
             fw.write(s + "\n");
         }
         fw.close();
+    }
+
+    void spillExcel(){
+
+
     }
 
 

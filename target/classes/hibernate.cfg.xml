@@ -18,8 +18,6 @@
         <!-- Set the current session context -->
         <property name="current_session_context_class">thread</property>
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">none</property>
-        <!-- dbcp connection pool configuration -->
 
 
         <mapping class="com.servicedb.Entities.FlowMeter" />
@@ -31,6 +29,8 @@
         <mapping class="com.servicedb.Entities.WellSetpoints" />
         <mapping class="com.servicedb.Entities.PumpsE" />
         <mapping class="com.servicedb.Entities.AcE" />
+        <mapping class="com.servicedb.Entities.SpillLevel" />
+        <mapping class="com.servicedb.Entities.StationPower" />
 
     </session-factory>
 </hibernate-configuration>

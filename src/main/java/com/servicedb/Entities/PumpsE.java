@@ -1,12 +1,14 @@
 package com.servicedb.Entities;
 
+import org.hibernate.dialect.Dialect;
+
 import javax.persistence.*;
 
 
 @Entity(name = "pumps")
-public class PumpsE {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class PumpsE extends Dialect {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private int id;
     @Basic

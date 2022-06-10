@@ -1,8 +1,11 @@
 package com.servicedb;
 
 
+import com.servicedb.Controllers.SpillScreen;
 import com.servicedb.Entities.AcE;
 import com.servicedb.Entities.PumpsE;
+import com.servicedb.Entities.SpillLevel;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -10,11 +13,41 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import java.io.FileInputStream;
+import java.io.IOException;
 
 
 public class ApachePOI {
 
     public ApachePOI() throws Exception {}
+
+    void spillExcel() throws Exception {
+        FileInputStream inFile = new FileInputStream("/Users/reeceyorgensen/spill level clean.xlsx");
+        Workbook workbook = new XSSFWorkbook(inFile);
+        Sheet spill = workbook.getSheetAt(0);
+        Session session = new HibernateUtil().getSession();
+
+        for (int i = 0; i < 164; i++) {
+            SpillLevel spillLevel = new SpillLevel();
+            Row row = spill.getRow(i);
+            System.out.println(i + " " + row.getCell(0) + " " + row.getCell(2) + " " + row.getCell(3) + " " +
+                    row.getCell(4) + " " + row.getCell(5));
+
+                spillLevel.setLocationString(row.getCell(0).getStringCellValue().strip());
+
+
+                if (row.getCell(1).getCellType() == CellType.NUMERIC )spillLevel.setMpwAsset(Integer.toString((int)row.getCell(1).getNumericCellValue()));
+                else spillLevel.setMpwAsset(row.getCell(1).getStringCellValue().strip());
+                if (row.getCell(2).getCellType() == CellType.NUMERIC ) spillLevel.setSpillLevel(Integer.toString((int)row.getCell(2).getNumericCellValue()));
+                else spillLevel.setSpillLevel(row.getCell(2).getStringCellValue().strip());
+                spillLevel.setTimeOff(row.getCell(3).getStringCellValue().strip());
+
+                session.saveOrUpdate(spillLevel);
+
+        }
+        session.close();
+
+    }
+
 
     void pumpStationExcel() throws Exception {
         FileInputStream inFile = new FileInputStream("/Users/reeceyorgensen/Downloads/MASTER_LIST.xlsx");
@@ -23,12 +56,11 @@ public class ApachePOI {
 
         for (int i = 162; i < 170; i++) {
             System.out.println(i);
-            HibernateUtil.PumpStationUpdate psu = new HibernateUtil.PumpStationUpdate(i);
             Row row = pumpstations.getRow(i);
-            psu.name(row.getCell(2).getStringCellValue())
-                    .meterNum((int) row.getCell(3).getNumericCellValue())
-                    .locationAdress(row.getCell(6).getStringCellValue())
-                    .commitTX();
+            //psu.name(row.getCell(2).getStringCellValue())
+              //      .meterNum((int) row.getCell(3).getNumericCellValue())
+                //    .locationAdress(row.getCell(6).getStringCellValue())
+                  //  .commitTX();
         }
     }
 
@@ -70,7 +102,6 @@ public class ApachePOI {
 
             AcE ac = new AcE();
 
-            ac.setLocation(sheet.getRow(i + 22).getCell(0).getStringCellValue());
             ac.setBrand(sheet.getRow(i + 22).getCell(1).getStringCellValue());
             ac.setModel(sheet.getRow(i + 22).getCell(3).getStringCellValue());
             ac.setVoltage(sheet.getRow(i + 22).getCell(4).getStringCellValue());

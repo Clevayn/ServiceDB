@@ -1,6 +1,6 @@
 package com.servicedb.Controllers;
 
-import com.servicedb.Entities.PumpStationsE;
+import com.servicedb.DAO.EntityList;
 import com.servicedb.Entities.PumpsE;
 import com.servicedb.HibernateUtil;
 import javafx.fxml.FXML;
@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -21,20 +20,14 @@ public class PumpsScreen extends HibernateUtil {
     public Button menuBtn;
     public BorderPane mainPane;
 
-
     public PumpsScreen() throws Exception {
         super();
 
     }
-
-
-
     public void initialize() {
-
-        pumpsList.setItems(pumpsListQuery());
+        pumpsList.setItems(new EntityList<PumpsE>(new PumpsE()).getObservableList());
         listCellCreator();
     }
-
     void listCellCreator() {
         pumpsList.setCellFactory(p -> new ListCell<>() {
             @Override
@@ -50,14 +43,10 @@ public class PumpsScreen extends HibernateUtil {
             }
         });
     }
-
-
     @FXML
     void menuBtnClick() throws IOException {
         Scene scene = new Scene(FXMLLoader.load(Objects.requireNonNull(MainScreen.class.getResource("/com/servicedb/main-screen.fxml"))));
         Stage stage = (Stage) mainPane.getScene().getWindow();
         stage.setScene(scene);
-
-
     }
 }

@@ -151,6 +151,39 @@ public class PumpStationsE {
     @Column(name = "station_after")
     private Integer stationAfter;
 
+    @Column(name = "ac_id")
+    private Integer acId;
+
+    @Column(name = "panel_bat", length = 25)
+    private String panelBat;
+
+    @Column(name = "rtu_bat", length = 25)
+    private String rtuBat;
+
+    public String getRtuBat() {
+        return rtuBat;
+    }
+
+    public void setRtuBat(String rtuBat) {
+        this.rtuBat = rtuBat;
+    }
+
+    public Integer getAcId() {
+        return acId;
+    }
+
+    public String getPanelBat() {
+        return panelBat;
+    }
+
+    public void setPanelBat(String panelBat) {
+        this.panelBat = panelBat;
+    }
+
+    public void setAcId(Integer acId) {
+        this.acId = acId;
+    }
+
     public Integer getId() {
         return id;
     }

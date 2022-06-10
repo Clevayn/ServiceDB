@@ -1,6 +1,7 @@
 package com.servicedb.Entities;
 
 import javafx.scene.text.Text;
+import org.hibernate.dialect.Dialect;
 
 import javax.persistence.*;
 
@@ -10,7 +11,7 @@ import java.util.Date;
 @Entity
 @Table(name = "ac")
 public class AcE {
-    @Id
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
@@ -38,9 +39,9 @@ public class AcE {
 
     @Column(name = "filter_size", length = 20)
     private String filterSize;
-
-    @Column(name = "location", length = 15)
-    private String location;
+    @Id
+    @Column(name = "location")
+    private int location;
 
     public Integer getId() {
         return id;
@@ -114,11 +115,11 @@ public class AcE {
         this.filterSize = filterSize;
     }
 
-    public String getLocation() {
+    public int getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(int location) {
         this.location = location;
     }
 
