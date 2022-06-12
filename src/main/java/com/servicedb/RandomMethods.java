@@ -1,8 +1,7 @@
 package com.servicedb;
 
-import com.servicedb.DAO.EntityList;
-import com.servicedb.Entities.PumpStationsE;
-import com.servicedb.Entities.PumpsE;
+import com.servicedb.MVC.Entities.PumpStation;
+import com.servicedb.MVC.Entities.Pump;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -11,8 +10,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class RandomMethods {
-    private PumpStationsE ps;
-    private PumpsE pump;
+    private PumpStation ps;
+    private Pump pump;
     private final HibernateUtil hu = new HibernateUtil();
     RandomMethods() throws Exception {}
 
@@ -23,14 +22,14 @@ public class RandomMethods {
         FileWriter fw = new FileWriter(file);
 
         List<String> list = new LinkedList<>();
-        for (PumpsE p: new EntityList<PumpsE>(new PumpsE()).getObservableList()
+        /*for (PumpsE p: new EntityList<PumpsE>(new PumpsE()).getObservableList()
              ) {
             String s = p.getModel().strip().replaceAll("\\.\\d+", "");
             if (!list.contains(p.getBrand().strip() + " : " + s)) {
                 list.add(p.getBrand().strip() + " : " + s);
 
             }
-        }
+        }*/
         fw.write(list.size() + "\n");
 
         for (String s: list

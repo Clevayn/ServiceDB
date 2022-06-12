@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicedb.Controllers.PSInspectionPLC">
+<Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicedb.MVC.PumpStationScreen.Controllers.PlcInspectionController">
     <BorderPane prefHeight="883.0" prefWidth="1005.0">
         <center>
             <GridPane prefHeight="852.0" prefWidth="1083.0" BorderPane.alignment="CENTER">

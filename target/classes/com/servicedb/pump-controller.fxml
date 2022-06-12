@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <Scene xmlns="http://javafx.com/javafx"
        xmlns:fx="http://javafx.com/fxml"
-       fx:controller="com.servicedb.Entities.PumpController">
+       fx:controller="com.servicedb.MVC.Entities.PumpController">
 <AnchorPane
             prefHeight="400.0" prefWidth="600.0">
 

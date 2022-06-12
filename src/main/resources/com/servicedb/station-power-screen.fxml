@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicedb.Controllers.StationPowerScreen">
+<Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicedb.MVC.PumpStationScreen.Controllers.StationPowerController">
 <BorderPane prefHeight="554.0" prefWidth="600.0">
       <center>
          <GridPane BorderPane.alignment="CENTER">

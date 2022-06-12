@@ -4,7 +4,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicedb.Controllers.PumpsScreen">
+<BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicedb.MVC.PumpsWindow.Controllers.PumpsController">
    <left>
       <ListView fx:id="pumpsList" prefHeight="468.0" prefWidth="415.0" BorderPane.alignment="CENTER" />
    </left>

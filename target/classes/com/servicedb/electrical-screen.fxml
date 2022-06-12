@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicedb.Controllers.ElectricalScreen">
+<Scene xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicedb.MVC.PumpStationScreen.Controllers.ElectricalController">
 <BorderPane prefHeight="621.0" prefWidth="477.0">
       <center>
          <GridPane BorderPane.alignment="CENTER">

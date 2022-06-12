@@ -1,10 +1,9 @@
 package com.servicedb;
 
 
-import com.servicedb.Controllers.SpillScreen;
-import com.servicedb.Entities.AcE;
-import com.servicedb.Entities.PumpsE;
-import com.servicedb.Entities.SpillLevel;
+import com.servicedb.MVC.Entities.AC;
+import com.servicedb.MVC.Entities.Pump;
+import com.servicedb.MVC.Entities.SpillLevel;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -13,7 +12,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import java.io.FileInputStream;
-import java.io.IOException;
 
 
 public class ApachePOI {
@@ -71,7 +69,7 @@ public class ApachePOI {
         Session session = new HibernateUtil().getSession();
         Transaction transaction = session.beginTransaction();
         for (int i = 1; i < 6554; i += 14) {
-            PumpsE pump = new PumpsE();
+            Pump pump = new Pump();
 
             pump.setMpwAssetNum(sheet.getRow(i).getCell(0).getStringCellValue());
             pump.setLocation(sheet.getRow(i).getCell(1).getStringCellValue());
@@ -100,7 +98,7 @@ public class ApachePOI {
 
         for (int i = 0; i < 16; i += 1) {
 
-            AcE ac = new AcE();
+            AC ac = new AC();
 
             ac.setBrand(sheet.getRow(i + 22).getCell(1).getStringCellValue());
             ac.setModel(sheet.getRow(i + 22).getCell(3).getStringCellValue());

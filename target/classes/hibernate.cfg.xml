@@ -8,7 +8,7 @@
         <property name="connection.url">jdbc:postgresql://localhost:5432/MPW</property>
         <property name="connection.username">postgres</property>
         <property name="connection.password"/>
-        <!-- property name="packagesToScan"> com.servicedb.Entities" </property -->
+        <!-- property name="packagesToScan"> com.servicedb.MVC.Entities" </property -->
         <!-- JDBC connection pool settings ... using built-in test pool -->
         <property name="connection.pool_size">1000</property>
         <!-- Select our SQL dialect -->
@@ -20,17 +20,17 @@
         <!-- Drop and re-create the database schema on startup -->
 
 
-        <mapping class="com.servicedb.Entities.FlowMeter" />
-        <mapping class="com.servicedb.Entities.GrinderStation" />
-        <mapping class="com.servicedb.Entities.LevelIndicator" />
-        <mapping class="com.servicedb.Entities.PressTrans" />
-        <mapping class="com.servicedb.Entities.PumpController" />
-        <mapping class="com.servicedb.Entities.PumpStationsE" />
-        <mapping class="com.servicedb.Entities.WellSetpoints" />
-        <mapping class="com.servicedb.Entities.PumpsE" />
-        <mapping class="com.servicedb.Entities.AcE" />
-        <mapping class="com.servicedb.Entities.SpillLevel" />
-        <mapping class="com.servicedb.Entities.StationPower" />
+        <mapping class="com.servicedb.MVC.Entities.FlowMeter" />
+        <mapping class="com.servicedb.MVC.Entities.GrinderStation" />
+        <mapping class="com.servicedb.MVC.Entities.LevelIndicator" />
+        <mapping class="com.servicedb.MVC.Entities.PressTrans" />
+        <mapping class="com.servicedb.MVC.Entities.PumpController" />
+        <mapping class="com.servicedb.MVC.Entities.PumpStation" />
+        <mapping class="com.servicedb.MVC.Entities.WellSetpoints" />
+        <mapping class="com.servicedb.MVC.Entities.Pump" />
+        <mapping class="com.servicedb.MVC.Entities.AC" />
+        <mapping class="com.servicedb.MVC.Entities.SpillLevel" />
+        <mapping class="com.servicedb.MVC.Entities.StationPower" />
 
     </session-factory>
 </hibernate-configuration>
