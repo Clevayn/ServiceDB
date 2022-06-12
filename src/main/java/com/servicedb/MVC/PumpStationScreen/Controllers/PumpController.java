@@ -73,8 +73,8 @@ public class PumpController {
         return "WWCPS" + s + "P" + pumpNum;
     }
 
-    public void initData(PumpStation ps, int pumpNum) throws Exception {
-        this.pump = new HibernateUtil().getPumpByLocation(locationString(ps.getStationNum(), pumpNum));
+    public void initData(Pump pump) throws Exception {
+        this.pump = pump;
         populate();
     }
 

@@ -31,6 +31,7 @@
         <mapping class="com.servicedb.MVC.Entities.AC" />
         <mapping class="com.servicedb.MVC.Entities.SpillLevel" />
         <mapping class="com.servicedb.MVC.Entities.StationPower" />
+        <mapping class="com.servicedb.MVC.Entities.PlcModuleOneInput" />
 
     </session-factory>
 </hibernate-configuration>

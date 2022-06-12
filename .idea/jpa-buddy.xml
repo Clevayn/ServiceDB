@@ -3,7 +3,7 @@
   <component name="JpaBuddyIdeaProjectConfig" ddlActionDbType="postgres" isReverseEngineeringLicenceAccepted="true">
     <option name="defaultUnitInitialized" value="true" />
     <option name="reverseEngineeringLastDbConnectionId" value="a5426e12-d89c-4024-a893-93997c514c2d" />
-    <option name="reLastEntityCreationPackage" value="src/main/java/com/servicedb/Entities" />
+    <option name="reLastEntityCreationPackage" value="src/main/java/com/servicedb/MVC/Entities" />
     <option name="newEntityIdStrategy" />
   </component>
 </project>

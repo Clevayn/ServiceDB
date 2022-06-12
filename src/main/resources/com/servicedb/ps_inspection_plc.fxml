@@ -835,7 +835,7 @@
                                                       <Insets top="5.0" />
                                                   </padding>
                                               </CheckBox>
-                                              <CheckBox fx:id="m1in0bad" mnemonicParsing="false" text="Wrong">
+                                              <CheckBox fx:id="m1in0InUse" mnemonicParsing="false" text="Wrong">
                                                   <padding>
                                                       <Insets left="5.0" top="5.0" />
                                                   </padding>
@@ -854,7 +854,7 @@
                                                       <Insets top="5.0" />
                                                   </HBox.margin>
                                               </CheckBox>
-                                              <CheckBox fx:id="m1in1bad" mnemonicParsing="false" text="Wrong">
+                                              <CheckBox fx:id="m1in1InUse" mnemonicParsing="false" text="Wrong">
                                                   <padding>
                                                       <Insets left="5.0" />
                                                   </padding>

@@ -24,6 +24,11 @@ public class PumpsDao implements Dao<Pump> {
     }
 
     @Override
+    public Pump retrieve(String location) {
+        return null;
+    }
+
+    @Override
     public void create(Pump pump) {
 
     }

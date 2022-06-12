@@ -11,15 +11,15 @@ public class AcDao implements Dao<AC> {
 
     @Override
     public void update(AC ac) {
-        em.getTransaction().begin();
+        tx.begin();
         em.merge(ac);
-        em.getTransaction().commit();
+        tx.commit();
     }
 
     @Override
     public ObservableList<AC> getObservableList() {
         ObservableList<AC> output = FXCollections.observableArrayList();
-        output.addAll(em.createQuery("from com.servicedb.MVC.PumpStationScreen.Entities.Ac ORDER BY station_num asc").getResultList());
+        output.addAll(em.createQuery("from com.servicedb.MVC.Entities.AC ORDER BY station_num asc").getResultList());
         return output;
     }
 
@@ -29,7 +29,14 @@ public class AcDao implements Dao<AC> {
     }
 
     @Override
-    public void create(AC ac) {
+    public AC retrieve(String location) {
+        return null;
+    }
 
+    @Override
+    public void create(AC ac) {
+        tx.begin();
+        em.persist(ac);
+        tx.commit();
     }
 }

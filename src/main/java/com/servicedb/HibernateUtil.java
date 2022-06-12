@@ -44,14 +44,14 @@ public class HibernateUtil {
 
     public ObservableList<Pump> pumpsListQuery() {
         ObservableList<Pump> output = FXCollections.observableArrayList();
-        output.addAll(entityManager.createQuery("from com.servicedb.Entities.PumpsE order by location", Pump.class).getResultList());
+        output.addAll(entityManager.createQuery("from com.servicedb.MVC.Entities.Pump order by location", Pump.class).getResultList());
         return output;
     }
     public SpillLevel getSpillLevel(int stationNum){
         return entityManager.find(SpillLevel.class, stationNum + 598);
     }
     public Pump getPumpByLocation(String location){
-        return (Pump) entityManager.createQuery("from com.servicedb.Entities.PumpsE pump where pump.location = :location").setParameter("location", location).getSingleResult();
+        return (Pump) entityManager.createQuery("from com.servicedb.MVC.Entities.Pump pump where pump.location = :location").setParameter("location", location).getSingleResult();
     }
     public AC getAC(int location){
         return entityManager.find(AC.class, location);

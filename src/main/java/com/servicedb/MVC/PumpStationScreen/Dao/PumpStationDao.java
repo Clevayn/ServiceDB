@@ -13,9 +13,9 @@ public class PumpStationDao implements Dao<PumpStation> {
 
     @Override
     public void update(PumpStation pumpStation) {
-        em.getTransaction().begin();
+        tx.begin();
         em.merge(pumpStation);
-        em.getTransaction().commit();
+        tx.commit();
     }
 
     @Override
@@ -31,10 +31,15 @@ public class PumpStationDao implements Dao<PumpStation> {
     }
 
     @Override
+    public PumpStation retrieve(String location) {
+        return null;
+    }
+
+    @Override
     public void create(PumpStation pumpStation) {
-        em.getTransaction().begin();
+        tx.begin();
         em.persist(pumpStation);
-        em.getTransaction().commit();
+        tx.commit();
 
     }
 

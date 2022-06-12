@@ -1,5 +1,7 @@
 package com.servicedb.MVC.PumpStationScreen.Controllers;
 
+import com.servicedb.MVC.Entities.PlcModuleOneInput;
+import com.servicedb.MVC.PumpStationScreen.Dao.PlcModuleOneInputDao;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
@@ -9,6 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 public class PlcInspectionController {
 
@@ -132,10 +135,10 @@ public class PlcInspectionController {
     public Text m1in2T;
     public Text m1in3T;
     public CheckBox m1in0ok;
-    public CheckBox m1in0bad;
+    public CheckBox m1in0InUse;
     public TextField m1in0TF;
     public CheckBox m1in1ok;
-    public CheckBox m1in1bad;
+    public CheckBox m1in1InUse;
     public TextField m1in1TF;
     public CheckBox m1in2ok;
     public CheckBox m1in2bad;
@@ -244,6 +247,32 @@ public class PlcInspectionController {
 
             pump3Label.setVisible(false);
         }
+        populate();
+
+    }
+
+    void populate(){
+        PlcModuleOneInput moduleOneInput = new PlcModuleOneInputDao().retrieve(stationNum);
+        setLabel(m1in0InUse, m1in0T, m1in0InstructionT, moduleOneInput.getInUse0(), moduleOneInput.getLabel0(), moduleOneInput.getInstructions0());
+        setLabel(m1in1InUse, m1in1T, m1in1instructionT, moduleOneInput.getInUse1(), moduleOneInput.getLabel1(), moduleOneInput.getInstructions1());
+        setLabel(m1in2bad, m1in2T, m1in2instructionT, moduleOneInput.getInUse2(), moduleOneInput.getLabel2(), moduleOneInput.getInstructions2());
+        setLabel(m1in3bad, m1in3T, m1in3instructionT, moduleOneInput.getInUse3(), moduleOneInput.getLabel3(), moduleOneInput.getInstructions3());
+        setLabel(m1in4bad, m1in4T, m1in4instructionT, moduleOneInput.getInUse4(), moduleOneInput.getLabel4(), moduleOneInput.getInstructions4());
+
+    }
+
+    void setLabel(CheckBox cb, Text labelText, Text instructionText, boolean bool, String label, String instructions){
+        if (bool) {
+            cb.setSelected(true);
+            if (Objects.nonNull(label)) labelText.setText(label.strip());
+            if (Objects.nonNull(instructions)) instructionText.setText(instructions);
+
+        }
+        else {
+            labelText.setText("Spare");
+            instructionText.setText("");
+        }
+
     }
 
     @FXML
@@ -272,8 +301,8 @@ public class PlcInspectionController {
         writeChecklist(cleanCB, "Clean");
 
         fw.write("Module 1 Inputs----------------------------------------------------------------------------------\n\n");
-        writeCheckBoxes(m1in0ok, m1in0bad, m1in0TF, 0, m1in0T.getText());
-        writeCheckBoxes(m1in1ok, m1in1bad, m1in1TF, 1, m1in1T.getText());
+        writeCheckBoxes(m1in0ok, m1in0InUse, m1in0TF, 0, m1in0T.getText());
+        writeCheckBoxes(m1in1ok, m1in1InUse, m1in1TF, 1, m1in1T.getText());
         writeCheckBoxes(m1in2ok, m1in2bad, m1in2TF,2, m1in2T.getText());
         writeCheckBoxes(m1in3ok, m1in3bad, m1in3TF,3, m1in3T.getText());
         writeCheckBoxes(m1in4ok, m1in4bad, m1in4TF,4, m1in4T.getText());

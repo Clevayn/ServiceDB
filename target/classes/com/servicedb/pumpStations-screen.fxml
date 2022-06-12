@@ -120,17 +120,17 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="pumpOneButton" mnemonicParsing="false" onAction="#pumpOneScreen" text="Pump 1" GridPane.columnIndex="5">
+            <Button fx:id="pumpOneButton" mnemonicParsing="false" onAction="#pumpWindow" text="Pump 1" GridPane.columnIndex="5">
                <GridPane.margin>
                   <Insets left="15.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="pumpTwoButton" mnemonicParsing="false" onAction="#pumpTwoScreen" text="Pump 2" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <Button fx:id="pumpTwoButton" mnemonicParsing="false" onAction="#pumpWindow" text="Pump 2" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="15.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="pumpThreeButton" mnemonicParsing="false" onAction="#pumpThreeScreen" text="Pump 3" GridPane.columnIndex="5" GridPane.rowIndex="2">
+            <Button fx:id="pumpThreeButton" mnemonicParsing="false" onAction="#pumpWindow" text="Pump 3" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="15.0" />
                </GridPane.margin>

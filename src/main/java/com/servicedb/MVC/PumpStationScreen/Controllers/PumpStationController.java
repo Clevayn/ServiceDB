@@ -1,11 +1,12 @@
 package com.servicedb.MVC.PumpStationScreen.Controllers;
 
+import com.servicedb.MVC.PumpStationScreen.Dao.PumpDao;
 import com.servicedb.MVC.PumpStationScreen.Dao.PumpStationDao;
 import com.servicedb.MVC.Entities.AC;
 
 import com.servicedb.MVC.Entities.*;
-import com.servicedb.HibernateUtil;
 
+import com.servicedb.MVC.PumpStationScreen.Dao.SpillLevelDao;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
@@ -208,7 +209,7 @@ public class PumpStationController {
         stage.setScene(loader.load());
 
         SpillLevelController controller = loader.getController();
-        //controller.initData();
+        controller.initData(new SpillLevelDao().retrieve(ps.getStationNum()));
 
         stage.show();
     }
@@ -225,42 +226,28 @@ public class PumpStationController {
 
         stage.show();
     }
-    @FXML
-    void pumpOneScreen() throws Exception {
-        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(
-                PumpStationController.class.getResource("/com/servicedb/stationPump.fxml")));
-        Stage stage = new Stage();
-        stage.setTitle("Pump");
-        stage.setScene(loader.load());
-
-        com.servicedb.MVC.PumpStationScreen.Controllers.PumpController controller = loader.getController();
-        controller.initData(ps, 1);
-
-        stage.show();
+    String locationString(int i, int pumpNum){
+        String s;
+        if (i < 10) s = "00" + i;
+        else if(i > 10 && i < 100) s = "0" + i;
+        else s = String.valueOf(i);
+        return "WWCPS" + s + "P" + pumpNum;
     }
     @FXML
-    void pumpTwoScreen() throws Exception {
+    void pumpWindow() throws Exception {
+        int pumpPosition = 0;
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(
                 PumpStationController.class.getResource("/com/servicedb/stationPump.fxml")));
         Stage stage = new Stage();
         stage.setTitle("Pump");
         stage.setScene(loader.load());
 
-        com.servicedb.MVC.PumpStationScreen.Controllers.PumpController controller = loader.getController();
-        controller.initData(ps, 2);
-
-        stage.show();
-    }
-    @FXML
-    void pumpThreeScreen() throws Exception {
-        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(
-                PumpStationController.class.getResource("/com/servicedb/stationPump.fxml")));
-        Stage stage = new Stage();
-        stage.setTitle("Pump");
-        stage.setScene(loader.load());
+        if (pumpOneButton.isFocused()) pumpPosition = 1;
+        else if (pumpTwoButton.isFocused()) pumpPosition = 2;
+        else if (pumpThreeButton.isFocused()) pumpPosition = 3;
 
         PumpController controller = loader.getController();
-        controller.initData(ps,3);
+        controller.initData(new PumpDao().retrieve(locationString(ps.getStationNum(), pumpPosition)));
 
         stage.show();
     }
