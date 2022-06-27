@@ -126,8 +126,7 @@ public class PumpStationController {
     }
     @FXML
     void stationPresenter() throws IOException {
-        ps = psList.getFocusModel().getFocusedItem();
-        cancel();
+        this.ps = psList.getFocusModel().getFocusedItem();
         populate();
     }
     void populate() throws IOException {
@@ -187,7 +186,6 @@ public class PumpStationController {
 
 
     }
-
     @FXML
     void openStationPower() throws Exception {
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(
@@ -303,14 +301,18 @@ public class PumpStationController {
     }
     @FXML
     void update() throws Exception {
-        em.find(PumpStation.class, this.ps.getStationNum() + 1092);
-        em.getTransaction().begin();
+        if (checkForUpdate(addressText, addressTF)) this.ps.setLocationAddress(addressTF.getText());
         if (checkForUpdate(dischargeText, dischargeTF))
             this.ps.setDischargeSize(Long.parseLong(dischargeTF.getText()));
-        if (checkForUpdate(stationaText, stationATF))
-            this.ps.setStationAfter(Integer.parseInt(stationATF.getText()));
-        if (checkForUpdate(stationbText, stationBTF))
-            this.ps.setStationBefore(Integer.parseInt(stationBTF.getText()));
+        if (checkForUpdate(stationaText, stationATF)) {
+
+            if (stationATF.getText().equals("")) this.ps.setStationAfter(null);
+            else this.ps.setStationAfter(Integer.parseInt(stationATF.getText()));
+        }
+        if (checkForUpdate(stationbText, stationBTF)) {
+            if (stationBTF.getText().equals("")) this.ps.setStationBefore(null);
+            else this.ps.setStationBefore(Integer.parseInt(stationBTF.getText()));
+        }
         if (checkForUpdate(zoneText, zoneTF))
             this.ps.setZone(Integer.parseInt(zoneTF.getText()));
         if (checkForUpdate(oitText, oitTF)) this.ps.setOit(Integer.parseInt(oitTF.getText()));
@@ -325,15 +327,14 @@ public class PumpStationController {
         if (checkForUpdate(genText, genSizeTF)) this.ps.setGeneratorSize(Integer.parseInt(genSizeTF.getText()));
         if (checkForUpdate(hlText, highLegTF)) this.ps.setHighLeg(Boolean.getBoolean(highLegTF.getText().toLowerCase()));
         if (checkForUpdate(gpdText, gpdTF)) this.ps.setGpd(Long.parseLong(gpdText.getText()));
-        em.merge(this.ps);
-        em.getTransaction().commit();
+        new PumpStationDao().update(this.ps);
         updateBtn.setVisible(false);
         cancelBtn.setVisible(false);
         initialize();
-        cancel();
+        swapDisp();
         populate();
     }
-    @FXML
+    /*@FXML
     void edit(){
         updateBtn.setVisible(true);
         cancelBtn.setVisible(true);
@@ -355,39 +356,47 @@ public class PumpStationController {
         setToEdit(gpdText, gpdTF);
         setToEdit(addressText, addressTF);
 
-    }
+    }*/
     @FXML
-    void cancel(){
+    void swapDisp(){
         cancelBtn.setVisible(false);
         updateBtn.setVisible(false);
-        setToDisplay(dischargeText, dischargeTF);
-        setToDisplay(stationbText, stationBTF);
-        setToDisplay(stationaText, stationATF);
-        setToDisplay(zoneText, zoneTF);
-        setToDisplay(oitText, oitTF);
-        setToDisplay(startUpText, startUpTF);
-        setToDisplay(designText, designCondTF);
-        setToDisplay(mNumText, meterNumTF);
-        setToDisplay(panelBatT, panelBatTF);
-        setToDisplay(rtuBatT, rtuBatTF);
-        setToDisplay(nameText, nameTF);
-        setToDisplay(genText, genSizeTF);
-        setToDisplay(hlText, highLegTF);
-        setToDisplay(voltText, voltageTF);
-        setToDisplay(phaseText, phaseTF);
-        setToDisplay(gpdText, gpdTF);
-        setToDisplay(addressText, addressTF);
+        swapDisplay(dischargeText, dischargeTF);
+        swapDisplay(stationbText, stationBTF);
+        swapDisplay(stationaText, stationATF);
+        swapDisplay(zoneText, zoneTF);
+        swapDisplay(oitText, oitTF);
+        swapDisplay(startUpText, startUpTF);
+        swapDisplay(designText, designCondTF);
+        swapDisplay(mNumText, meterNumTF);
+        swapDisplay(panelBatT, panelBatTF);
+        swapDisplay(rtuBatT, rtuBatTF);
+        swapDisplay(nameText, nameTF);
+        swapDisplay(genText, genSizeTF);
+        swapDisplay(hlText, highLegTF);
+        swapDisplay(voltText, voltageTF);
+        swapDisplay(phaseText, phaseTF);
+        swapDisplay(gpdText, gpdTF);
+        swapDisplay(addressText, addressTF);
     }
     private boolean checkForUpdate(Text text, TextField tf){
         return !text.getText().equals(tf.getText());
     }
-    private void setToEdit(Text text, TextField tf) {
-        text.setVisible(false);
-        tf.setVisible(true);
-        tf.setText(text.getText());
-    }
-    private void setToDisplay(Text text, TextField tf){
-        text.setVisible(true);
-        tf.setVisible(false);
+    private void swapDisplay(Text text, TextField tf){
+        if (tf.isVisible()){
+            text.setVisible(true);
+            tf.setVisible(false);
+            cancelBtn.setVisible(false);
+            updateBtn.setVisible(false);
+        } else {
+            text.setVisible(false);
+            tf.setVisible(true);
+            tf.setPromptText(text.getText());
+            tf.setText(text.getText());
+            cancelBtn.setVisible(true);
+            updateBtn.setVisible(true);
+        }
+
+
     }
 }

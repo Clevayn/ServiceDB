@@ -4,15 +4,21 @@ package com.servicedb;
 import com.servicedb.MVC.Entities.AC;
 import com.servicedb.MVC.Entities.Pump;
 import com.servicedb.MVC.Entities.SpillLevel;
+import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xwpf.usermodel.*;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import java.io.FileInputStream;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTRow;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class ApachePOI {
 
@@ -48,6 +54,7 @@ public class ApachePOI {
 
 
     void pumpStationExcel() throws Exception {
+        new XWPFDocument(OPCPackage.open(new File("")));
         FileInputStream inFile = new FileInputStream("/Users/reeceyorgensen/Downloads/MASTER_LIST.xlsx");
         Workbook workbook = new XSSFWorkbook(inFile);
         Sheet pumpstations = workbook.getSheetAt(1);
@@ -112,5 +119,56 @@ public class ApachePOI {
         }
         session.close();
     }
+
+    void wordDocument() throws IOException {
+        String fileName = "/Users/reeceyorgensen/Test outputs/text.docx";
+        try(XWPFDocument document = new XWPFDocument()) {
+            XWPFParagraph p1 = document.createParagraph();
+            p1.setAlignment(ParagraphAlignment.CENTER);
+            XWPFRun run = p1.createRun();
+            run.setBold(true);
+            run.setItalic(true);
+            run.setFontSize(22);
+            run.setFontFamily("New Roman");
+            run.setText("Pump Station 076");
+
+            //XWPFTable pumpContainerTable = document.createTable();
+            XWPFTable table1 = generatePumpTable(document);
+            XWPFTable table2 = generatePumpTable(document);
+            XWPFTable table3 = generatePumpTable(document);
+            //pumpContainerTable.getRow(0).getCell(1).insertTable(2, table2);
+            //pumpContainerTable.getRow(0).getCell(2).insertTable(4, table3);
+
+
+            try(FileOutputStream out = new FileOutputStream(fileName)) {
+                document.write(out);
+            }
+        }
+
+    }
+
+    XWPFTable generatePumpTable(XWPFDocument doc){
+        XWPFTable table = doc.createTable(4,3);
+        //PUMP 1
+        table.removeBorders();
+        XWPFRun tableRun = table.getRow(0).getCell(0).addParagraph().createRun();
+        //column 1 labels
+        table.getRow(0).getCell(0).addParagraph().createRun().setText("Pump 1");
+        table.getRow(1).getCell(0).addParagraph().createRun().setText("Leg 1");
+        table.getRow(2).getCell(0).addParagraph().createRun().setText("Leg 2");
+        table.getRow(3).getCell(0).addParagraph().createRun().setText("Leg 3");
+        //column 2
+        table.getRow(0).getCell(1).addParagraph().createRun().setText("AMPS");
+        table.getRow(1).getCell(1).addParagraph().createRun().setText("");
+        table.getRow(2).getCell(1).addParagraph().createRun().setText("");
+        table.getRow(3).getCell(1).addParagraph().createRun().setText("");
+        //column 3
+        table.getRow(0).getCell(2).addParagraph().createRun().setText("MEG");
+        table.getRow(1).getCell(2).addParagraph().createRun().setText("");
+        table.getRow(2).getCell(2).addParagraph().createRun().setText("");
+        table.getRow(3).getCell(2).addParagraph().createRun().setText("");
+        return table;
+    }
+
 
 }

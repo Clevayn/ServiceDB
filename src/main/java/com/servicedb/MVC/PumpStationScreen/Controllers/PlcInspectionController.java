@@ -280,8 +280,8 @@ public class PlcInspectionController {
         this.fw = new FileWriter(file);
         fw.write("\nPS:" + this.dateString + "\n\n\n");
 
-        if (panelConditionCBgood.isSelected()) fw.write("\u2705Panel Condition:  GOOD\n");
-        if (panelConditionCBreplace.isSelected()) fw.write(" \u274CPanel Condition:  REPLACE\n");
+        if (panelConditionCBgood.isSelected()) fw.write("\u2705 Panel Condition:  GOOD\n");
+        if (panelConditionCBreplace.isSelected()) fw.write(" \u274C Panel Condition:  REPLACE\n");
 
         writePump(P1L1AmpTF, P1L2AmpTF, P1L3AmpTF, P1L1MegTF, P1L2MegTF, P1L3MegTF, P1L1HertzTF, "One");
         writePump(P2L1AmpTF, P2L2AmpTF, P2L3AmpTF, P2L1MegTF, P2L2MegTF, P2L3MegTF, P2L1HertzTF, "Two");
@@ -289,7 +289,7 @@ public class PlcInspectionController {
 
 
 
-        fw.write("Check List--------------------------------------------------------------------------------------\n\n");
+        fw.write("Check List--------------------------------------------------------------\n\n");
         writeChecklist(terminationsCB, "Terminations");
         writeChecklist(picturesCB, "Pictures");
         writeChecklist(drawingsCB, "Drawings");
@@ -300,7 +300,7 @@ public class PlcInspectionController {
         writeChecklist(batCB, "Battery");
         writeChecklist(cleanCB, "Clean");
 
-        fw.write("Module 1 Inputs----------------------------------------------------------------------------------\n\n");
+        fw.write("Module 1 Inputs---------------------------------------------------------\n\n");
         writeCheckBoxes(m1in0ok, m1in0InUse, m1in0TF, 0, m1in0T.getText());
         writeCheckBoxes(m1in1ok, m1in1InUse, m1in1TF, 1, m1in1T.getText());
         writeCheckBoxes(m1in2ok, m1in2bad, m1in2TF,2, m1in2T.getText());
@@ -320,7 +320,7 @@ public class PlcInspectionController {
         writeCheckBoxes(m1in14ok, m1in14bad, m1in14TF,14, m1in14T.getText());
         writeCheckBoxes(m1in15ok, m1in15bad, m1in14TF,15, m1in15T.getText());
 
-        fw.write("Module 2 Inputs----------------------------------------------------------------------------------\n\n");
+        fw.write("Module 2 Inputs---------------------------------------------------------\n\n");
         writeCheckBoxes(m2in0ok, m2in0bad, m2in0TF, 0, m2in0T.getText());
         writeCheckBoxes(m2in1ok, m2in1bad, m2in1TF, 1, m2in1T.getText());
         writeCheckBoxes(m2in2ok, m2in2bad, m2in2TF,2, m2in2T.getText());
@@ -340,7 +340,7 @@ public class PlcInspectionController {
         writeCheckBoxes(m2in14ok, m2in14bad, m2in14TF,14, m2in14T.getText());
         writeCheckBoxes(m2in15ok, m2in15bad, m2in14TF,15, m2in15T.getText());
 
-        fw.write("Notes-------------------------------------------------------------------------------------------\n\n");
+        fw.write("Notes-------------------------------------------------------------------\n\n");
         fw.write(notes.getText());
 
         fw.close();
@@ -356,7 +356,7 @@ public class PlcInspectionController {
     void writePump(TextField amp1, TextField amp2, TextField amp3,
                    TextField meg1, TextField meg2, TextField meg3,
                    TextField hertz, String pumpNum) throws IOException {
-        fw.write("Pump "+ pumpNum + " --------------------------------------------------------------------------------------\n\n");
+        fw.write("Pump "+ pumpNum + " ----------------------------------------------------\n\n");
         fw.write("Leg 1    Amp:  " + amp1.getText() + "   Meg: " + meg1.getText() + "   Hertz: " + hertz.getText() + "\n\n");
         fw.write("Leg 2    Amp:  " + amp2.getText() + "   Meg: " + meg2.getText() +  "\n\n");
         fw.write("Leg 3    Amp:  " + amp3.getText() + "   Meg: " + meg3.getText() +  "\n\n\n");

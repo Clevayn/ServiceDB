@@ -19,6 +19,7 @@ public class Main extends Application {
     public static void main(String[] args) throws Exception {
         //new ApachePOI().spillExcel();
         //new HibernateUtil().setUp();
+        new ApachePOI().wordDocument();
         launch();
     }
 }
